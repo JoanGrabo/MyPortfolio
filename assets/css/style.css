@@ -1182,27 +1182,30 @@ section {
 
 .skills div {
   display: grid;
-  grid-template-columns: repeat(4, 20%);
+  grid-template-columns: repeat(8, 10%);
   gap: 20px
 }
-.skills h2 {
-  color: #e39a40;
-  margin-top: 30px;
-  margin-bottom: 30px;
+
+.skills h4 {
+  color: #45505b;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 20px;
   border-left: 5px solid #e39a40;
   padding-left: 20px
 }
 
 .skills div .skill-el {
-  padding: 15px;
+  padding: 10px;
   background-color: white;
   backdrop-filter: blur(2px);
   border-radius: 10px;
-  box-shadow: rgba(0,0,0,0.15) 4px 4px 15px;
+  box-shadow: rgba(0,0,0,0.15) 4px 4px 4px;
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio:2 / 1;
+  aspect-ratio:1 / 1;
   transition: 300ms
 }
 
@@ -1288,40 +1291,30 @@ section {
   bottom: 0;
   left: calc(50% - 20px);
 }
-/*--------------------------------------------------------------
-# Skills
---------------------------------------------------------------
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0s ease 0s;
+  visibility: visible;
 }
-
-.skills .progress .skill {
-  padding: 10px 0;
-  margin: 15;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #45505b;
+[data-title]:after {
+  content: attr(data-title);
+  background-color: #45505b;
+  color: #ffffff;
+  font-size: 15px;
+  position: absolute;
+  padding: 3px 20px;
+  bottom: -0.6em;
+  white-space: nowrap;
+  box-shadow: 0px 1px 3px #000000;
+  opacity: 0;
+  border: 1px solid #45505b;
+  z-index: 99999;
+  visibility: hidden;
+  border-radius: 6px;
+  
 }
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+[data-title] {
+  position: static;
+  top:30px;
 }
-
-.skills .progress-bar-wrap {
-  background: #f2f3f5;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #e39a40;
-}
-*/
 
